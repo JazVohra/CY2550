@@ -1,0 +1,11 @@
+curl \
+  --data-urlencode sig="$(\
+   echo '{"body":{"key":{"eldest_kid":"0101014b1b734dfb11852c64af455a17ddcfe390e54e533d21a4b1f0c157516c802b0a","fingerprint":"571ab5bab18175ffdf63813a219efe56228a036f","host":"keybase.io","key_id":"219efe56228a036f","kid":"0101014b1b734dfb11852c64af455a17ddcfe390e54e533d21a4b1f0c157516c802b0a","uid":"71ce54fd9a1e1fa70998a4c5c9200319","username":"vohraj"},"service":{"name":"github","username":"JazVohra"},"type":"web_service_binding","version":1},"ctime":1689976845,"expire_in":157680000,"prev":"386545ea73aab7f8e4f2ed40ee7a780486f71cea3b04723a64c72f2bf3668f6b","seqno":2,"tag":"signature"}' | \
+   gpg -u '571ab5bab18175ffdf63813a219efe56228a036f' -a --sign)" \
+  --data-urlencode type="web_service_binding.github" \
+  --data-urlencode csrf_token="lgHZIDcxY2U1NGZkOWExZTFmYTcwOTk4YTRjNWM5MjAwMzE5zmS6/OrOAxcEAMDEIGcq5OOhT/+/EAnKx6h09aMbFzngsaCip4B/wbiOio/J" \
+  --data-urlencode plain_out="1" \
+  --data-urlencode session="kyjEEHHOVP2aHh+nCZikxckgAxnEEKljAan9a6UYybqquNk40jM=" \
+  --data-urlencode signing_kid="0101014b1b734dfb11852c64af455a17ddcfe390e54e533d21a4b1f0c157516c802b0a" \
+  --data-urlencode remote_username="JazVohra" \
+  https://keybase.io/_/api/1.0/sig/post.json
